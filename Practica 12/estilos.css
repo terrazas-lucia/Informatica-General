@@ -1,0 +1,56 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: black;
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+header h1{
+    float: left;
+    font-size: 28px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.menu{
+    background: black;
+    margin-top: 15px;
+    float: right;
+}
+
+.menu a{
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 1px violet;
+    border-bottom: 1px solid black;
+}
+
+#banner{
+    margin-top: 50px;
+    position: relative;
+    text-shadow: 2px 2px violet;
+}
+
+#banner img{
+   
+    width: 50%;
+    height: 50%;
+}
+
+#banner h2{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: white;
+    text-shadow: 2px 2px violet;
+
+}
