@@ -1,0 +1,57 @@
+body{
+	font-family: Arial, sans-serif;
+	background-color: grey;
+}
+#contenedor{
+	background-color: white;
+	padding: 10px;
+	margin: 0 10% 10% 10%;
+}
+header{
+	background-color: green;
+	text-align: center;
+	padding: 25px;
+	margin: 15px;
+}
+
+h1{
+	color: black;
+	background-color: greenyellow;
+	padding: 10px;
+	margin: 15px;
+}
+
+h2{
+	color: white;
+}
+
+article{
+	display: flex;
+	padding: 20px;
+}
+
+#consigna {
+	width: 40%;
+}
+
+#resolucion {
+	width: 75%;
+}
+
+p{
+	display: block;
+	margin: 15px;
+}
+
+footer{
+	background-color: green;
+	text-align: center;
+	padding: 20px;
+	margin: 15px;
+	color: white;
+}
+
+button{
+	padding: 10px;
+	margin-left: 20px;
+}
