@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 20</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+
+    <script>   
+        let base = parseInt(prompt('Ingrese los cm de la base: '));
+        let altura = parseInt(prompt('Ingrese los cm de la altura: '));
+        let superficie = base * altura;
+        let perimetro = base * 2 + altura * 2;
+        document.getElementById('parrafo').innerHTML = 'La superficie es: ' + superficie + 'cm' + ' y el Perimetro: ' + perimetro + 'cm';
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 21</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <button onclick="invertirColores()">Intercambiar colores</button>
+
+    <script>
+        let nombre = prompt('Ingrese su nombre: ');
+        let color1 = prompt('Ingrese un color: ');
+        let color2 = prompt('Ingrese otro color: ');
+        let mensaje = document.getElementById('parrafo');
+        
+        mensaje.innerHTML = 'Tu nombre es: ' + nombre;
+        mensaje.style.color = color1; 
+        mensaje.style.backgroundColor = color2;
+
+        function invertirColores(){
+           let colorInvertido = mensaje.style.color;
+           mensaje.style.color = mensaje.style.backgroundColor;
+           mensaje.style.backgroundColor = colorInvertido;
+            
+        }
+    </script>
+
+</body>
+</html>

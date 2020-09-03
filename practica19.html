@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 19</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+
+    <button onclick="document.getElementById('parrafo').innerHTML = num += 3">Haceme click</button>
+    
+    <script>
+        let num = parseInt(prompt('Ingrese un numero: '));
+        num += 3;
+        document.getElementById('parrafo').innerHTML = num;
+        
+    </script>
+</body>
+
+</html>
