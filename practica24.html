@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 24</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <script>
+        let numero = prompt('Ingrese un numero positivo de dos digitos: ');
+
+        if (numero.length === 2) {
+            let num1 = parseInt(numero.slice(0, 1));
+            let num2 = parseInt(numero.slice(1));
+
+            let resultado = num1 + num2;
+
+            document.getElementById('parrafo').innerHTML = resultado;
+        }else{
+            alert('Flaco media pila');
+        }
+
+    </script>
+</body>
+</html>

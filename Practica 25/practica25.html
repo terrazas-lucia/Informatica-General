@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 25</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <img id="imagen" src="" alt="">
+    <script>
+        let numero1 = parseInt(prompt('Ingrese un numero:'));
+        let numero2 = parseInt(prompt('Ingrese otro numero:'));
+        let mensaje = document.getElementById('parrafo');
+
+        if(numero1 === numero2){
+            mensaje.innerHTML = "Los numeros ingresados son iguales."
+            document.getElementById('imagen').src = "img/1.jpg";
+        } else if(numero1 > numero2){
+            mensaje.innerHTML = "El primer numero ingresado es mayor al segundo numero."
+            document.getElementById('imagen').src = "img/2.png";
+        } else{
+            mensaje.innerHTML = "El segundo numero ingresado es mayor al primer numero."
+            document.getElementById('imagen').src = "img/3.jpg";
+        }
+    </script>
+</body>
+</html>

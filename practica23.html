@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 23</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+
+    <script>
+        let numero = parseInt(prompt('Ingrese un numero: '));
+        let resultado = numero % 2;
+        let mensaje =  document.getElementById('parrafo');
+
+        if(resultado === 0){
+            mensaje.innerHTML = 'El numero ingresado es par.'
+            mensaje.style.backgroundColor = 'red';
+            
+        } else{
+            mensaje.innerHTML = 'El numero ingresado es impar.'
+            mensaje.style.backgroundColor = 'green';
+        }
+
+    </script>
+</body>
+</html>
