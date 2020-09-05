@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 33</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <p id="parrafo1"></p>
+    <p id="parrafo2"></p>
+    <p id="parrafo3"></p>
+    <script>
+        let numero = parseInt(prompt('¿Cuantos corredores participaron de la carrera?'));
+        let corredoresEnArray = [];
+        for(let i = 0; i < numero; i++){
+            let ingresado = parseInt(prompt('Ingrese los minutos que tardo en terminar la carrera: '));
+            if(!isNaN(ingresado)){
+                corredoresEnArray.push(ingresado);
+            } else{
+                alert('Flaco dale.');
+            }
+        }
+
+        let cantidadDeMinutos = 0;
+        for(let i = 0; i < corredoresEnArray.length; i++){
+            cantidadDeMinutos += corredoresEnArray[i];
+        }
+        let promedio = cantidadDeMinutos / numero;
+
+        let cantidadDeCorredores130 = 0;
+        let cantidadDeCorredores3160 = 0;
+        let cantidadDeCorredores60 = 0;
+        for(let i = 0; i < corredoresEnArray.length; i++){
+            if(corredoresEnArray[i] >= 1 && corredoresEnArray[i] <= 30){
+                cantidadDeCorredores130++;
+            } else if(corredoresEnArray[i] >= 31 && corredoresEnArray[i] <= 60){
+                cantidadDeCorredores3160++; 
+            } else if(corredoresEnArray[i] > 60){
+                cantidadDeCorredores60++;
+            } else{
+                alert("Jodete.");
+            }
+        }
+
+        let porcentaje1 = cantidadDeCorredores130 * 100 / corredoresEnArray.length;
+        let porcentaje2 = cantidadDeCorredores3160 * 100 / corredoresEnArray.length;
+        let porcentaje3 = cantidadDeCorredores60 * 100 / corredoresEnArray.length;
+
+        document.getElementById('parrafo').innerHTML = "El promedio total de todos los corredores es " + promedio;
+        document.getElementById('parrafo1').innerHTML = "El porcentaje de los corredores que tardaron entre 1 y 30 minutos es " + porcentaje1;
+        document.getElementById('parrafo2').innerHTML = "El porcentaje de los corredores que tardaron entre 31 y 60 minutos es " + porcentaje2;
+        document.getElementById('parrafo3').innerHTML = "El porcentaje de los corredores que tardaron mas de 60 minutos es " + porcentaje3;
+    </script>
+</body>
+</html>

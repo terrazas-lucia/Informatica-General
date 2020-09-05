@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 28</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <img id="imagen" src="" alt="">
+    <script>
+        let actor1 = parseInt(prompt('Ingrese la edad estimada del primer actor: '));
+        let actor2 = parseInt(prompt('Ingrese la edad estimada del segundo actor: '));
+        let actor3 = parseInt(prompt('Ingrese la edad estimada del tercer actor: '));
+        let actor4 = parseInt(prompt('Ingrese la edad estimada del cuarto actor: '));
+        let actor5 = parseInt(prompt('Ingrese la edad estimada del quinto actor: '));
+       
+        var eleccion = prompt('¿Desea conocer el actor de mayor o menor edad?');
+
+        if(eleccion == 'mayor'){
+            let edadMayor = Math.max(actor1, actor2, actor3, actor4, actor5);
+
+            switch(edadMayor){
+                case actor1:
+                    document.getElementById('parrafo').innerHTML = "Gatito asustado," + actor1 + " es la edad del actor mayor.";
+                    document.getElementById('imagen').src = "img/1.jpg";
+                break;
+                case actor2:
+                    document.getElementById('parrafo').innerHTML = "Perrito sorprendido, " + actor2 + " es la edad del actor mayor.";
+                    document.getElementById('imagen').src = "img/2.png";
+                break;
+                case actor3:
+                    document.getElementById('parrafo').innerHTML = "Gatito feliz, " + actor3 + " es la edad del actor mayor.";
+                    document.getElementById('imagen').src = "img/3.jpg";
+                break;
+                case actor4: 
+                    document.getElementById('parrafo').innerHTML = "Suni feliz, " + actor4 + " es la edad del actor mayor";
+                    document.getElementById('imagen').src = "img/4.png";
+                break;
+                case actor5:
+                    document.getElementById('parrafo').innerHTML = "Muchos gatitos, " + actor5 + " es la edad del actor mayor.";
+                    document.getElementById('imagen').src = "img/5.png";
+                break;
+                default:
+                    alert("Sos re tonto gilastrun.");
+                break;
+            }
+            
+        } else if(eleccion == 'menor'){
+            let edadMenor = Math.min(actor1, actor2, actor3, actor4, actor5);
+
+            switch(edadMenor){
+                case actor1:
+                    document.getElementById('parrafo').innerHTML = "Gatito asustado," + actor1 + " es la edad del actor menor.";
+                    document.getElementById('imagen').src = "img/1.jpg";
+                break;
+                case actor2:
+                    document.getElementById('parrafo').innerHTML = "Perrito sorprendido, " + actor2 + " es la edad del actor menor.";
+                    document.getElementById('imagen').src = "img/2.png";
+                break;
+                case actor3:
+                    document.getElementById('parrafo').innerHTML = "Gatito feliz, " + actor3 + " es la edad del actor menor.";
+                    document.getElementById('imagen').src = "img/3.jpg";
+                break;
+                case actor4: 
+                    document.getElementById('parrafo').innerHTML = "Suni feliz, " + actor4 + " es la edad del actor menor.";
+                    document.getElementById('imagen').src = "img/4.png";
+                break;
+                case actor5:
+                    document.getElementById('parrafo').innerHTML = "Muchos gatitos, " + actor5 + " es la edad del actor menor.";
+                    document.getElementById('imagen').src = "img/5.png";
+                break;
+                default:
+                    alert("Sos re tonto gilastrun.");
+                break;
+            }
+        } else{
+            alert("Jodete.");
+        }
+    </script>
+</body>
+</html>

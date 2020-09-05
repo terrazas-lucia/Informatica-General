@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 32</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <script>
+        let numerosEnArray = [];
+        for(let i = 0; i < 15; i++){
+            let numero = parseInt(prompt("Ingrese los numeros: "));
+            
+            if (!isNaN(numero)) {
+                numerosEnArray.push(numero);
+            } else {
+                alert("Flaco dale.")
+            }
+        }
+
+        let cantidadImpares = 0;
+        for(let i = 0; i < numerosEnArray.length; i++){
+            if(numerosEnArray[i] % 2 !== 0) {
+                cantidadImpares++; 
+            }
+        }
+        
+        let porcentaje = cantidadImpares / numerosEnArray.length * 100;
+        document.getElementById('parrafo').innerHTML = "El promedio de los numeros impares es: " + porcentaje + "%";
+    </script>
+    
+</body>
+</html>

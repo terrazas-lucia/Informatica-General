@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 33</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <script>
+        let libros = [];
+        while(true) {
+            const libroIngresado = prompt("Elegi un libro chaval");
+            if (libroIngresado === "fin") {
+                break;
+            }
+            const cantidadDePaginas = parseInt(prompt("Decime cuantas paginas tenes"));
+            if(cantidadDePaginas > 0) {
+                libros.push([libroIngresado, cantidadDePaginas]);
+            }
+        }
+        let libroMayor = ["",0];
+        let libroMenor = ["" , Infinity];
+        for (let i = 0; i < libros.length; i++) {
+            for (let j = 0; j < libros[i].length; j++) {
+                if (libros[i][j] > libroMayor[1]) {
+                    libroMayor = libros[i];
+                }
+                if(libros[i][j] < libroMenor[1]) {
+                    libroMenor = libros[i];
+                }
+            }
+        }
+
+        function diferencia() {
+            return libroMayor[1] - libroMenor[1];
+        }
+
+        document.getElementById("parrafo").innerHTML = "El libro con mayor cantidad de paginas es " + libroMayor + " Y el menor " + libroMenor + " y su diferencia es " + diferencia();
+    </script>
+</body>
+</html>

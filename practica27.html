@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 27</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <script>
+        let calificacion = parseInt(prompt("Ingrese la calificacion:"));
+        switch(calificacion){
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+                document.getElementById('parrafo').innerHTML = calificacion + " La calificacion es DESAPROBADO.";
+                break;
+            case 4:
+                document.getElementById('parrafo').innerHTML = calificacion + " La calificacion es APROBADO.";
+                break;
+            case 5:
+            case 6:
+                document.getElementById('parrafo').innerHTML = calificacion + " La calificacion es BIEN.";
+                break;
+            case 7:
+            case 8:
+                document.getElementById('parrafo').innerHTML = calificacion + " La calificacion es MUY BIEN.";
+                break;
+            case 9:
+                document.getElementById('parrafo').innerHTML = calificacion + " La calificacion es NOTABLE.";
+                break;
+            case 10:
+                document.getElementById('parrafo').innerHTML = calificacion + " La calificacion es SOBRESALIENTE.";
+                break;
+            default:
+                alert("Ingrese una calificacion valida.");
+                break;
+        }
+    </script>
+</body>
+</html>

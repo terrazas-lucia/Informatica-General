@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 30</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <script>
+        let edades = [];
+
+        for(let i = 0; i <= 4; i++){
+            let ingresado = parseInt(prompt('Ingrese la edad:')); 
+            if (ingresado >= 0 && ingresado < 125) {
+                edades.push(ingresado);
+            } else {
+                alert("Flaco dale.")
+            }
+        }
+        for (let i = 0; i < edades.length; i++) {
+            if (edades[i] > 25) {
+                document.getElementById('parrafo').innerHTML += edades[i] + '<br>';
+            }
+        }                                       
+    </script>
+</body>
+</html>

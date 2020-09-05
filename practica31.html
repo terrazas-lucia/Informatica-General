@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 31</title>
+</head>
+<body>
+    <p id="parrafo"></p>
+    <script>
+        let numero = parseInt(prompt('¿Cuantos numeros quiere ingresar?'));
+        let numerosEnArray = [];
+        for(let i = 0; i < numero; i++){
+            let ingresado = parseInt(prompt('Ingrese sus numeros'));
+            if (!isNaN(ingresado)) {
+                numerosEnArray.push(ingresado);
+            } else {
+                alert("Flaco dale.")
+            }
+        }
+
+        let suma = 0;
+        for (let i = 0; i < numerosEnArray.length; i++) {
+            suma += numerosEnArray[i];
+        }
+        const promedio = suma / numero;
+
+        document.getElementById('parrafo').innerHTML = "El promedio es " + promedio;
+
+    </script>
+</body>
+</html>
