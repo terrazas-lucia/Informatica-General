@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 42</title>
+</head>
+<body>
+    <p>Alumno 1: <button onclick="cambiarNota(1)">Cargar nota</button><br></p>
+    <p>Alumno 2: <button onclick="cambiarNota(2)">Cargar nota</button><br></p>
+    <p>Alumno 3: <button onclick="cambiarNota(3)">Cargar nota</button><br></p>
+    <p>Alumno 4: <button onclick="cambiarNota(4)">Cargar nota</button><br></p>
+    <p>Alumno 5: <button onclick="cambiarNota(5)">Cargar nota</button><br></p>
+    <p>Alumno 6: <button onclick="cambiarNota(6)">Cargar nota</button><br></p>
+    <p>Promedio: <button onclick="alert('El promedio de las notas es: ' + calcularPromedio())">Calcular</button><br></p>
+    <p>Cantidad de notas mayores al Promedio <button onclick="calcularMayorAPromedio()">Calcular</button></p>
+    <script>
+        let nota = [0,0,0,0,0,0];
+        let mayorAlPromedio = 0;
+        let promedio = 0;
+
+
+        function cambiarNota(alumno) {
+            switch (alumno) {
+                case 1:
+                    nota[0] = parseInt(prompt("Ingrese la nota: "));
+                    break;
+                case 2:
+                    nota[1] = parseInt(prompt("Ingrese la nota: "));
+                    break;
+                case 3: 
+                    nota[2] = parseInt(prompt("Ingrese la nota: "));
+                    break;
+                case 4:
+                    nota[3] = parseInt(prompt("Ingrese la nota: "));
+                    break;
+                case 5: 
+                    nota[4] = parseInt(prompt("Ingrese la nota: "));
+                    break;
+                case 6:
+                    nota[5] = parseInt(prompt("Ingrese la nota: "));
+                    break;
+                default:
+                    alert("Jodete.");
+                    break;
+            }
+        }
+        
+        function calcularPromedio() {
+            let sumaDeLasNotas = 0;
+            for(let i = 0; i < nota.length; i++){
+                sumaDeLasNotas += nota[i];
+            }
+            promedio = sumaDeLasNotas / nota.length;
+            return promedio;
+        }
+
+        function calcularMayorAPromedio() {
+            for(let i = 0; i < nota.length; i++){
+                if(nota[i] > promedio){
+                    mayorAlPromedio++;
+                }
+            }
+            alert("Las notas mayores al promedio son: " + mayorAlPromedio);
+        }
+
+        
+        
+    </script>
+</body>
+</html>

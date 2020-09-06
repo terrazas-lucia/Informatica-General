@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es"> 
+<head>
+	<meta charset="UTF-8">
+	<title>Parcial</title> 
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+	<div id="contenedor">
+	<header>
+		<h1>Ejercicio 3</h1>
+		<h2>Tema 6</h2>
+	</header>
+
+	<nav>
+		<ul>
+			<a href="index.html"><li>Inicio</li></a>
+			<a href="ej1.html"><li>Ejercicio 1</li></a>
+			<a href="ej2.html"><li>Ejercicio 2</li></a>
+			<a href="ej3.html"><li>Ejercicio 3</li></a>
+		</ul>
+	</nav>
+	<article>
+			<h1>Consigna del ejercicio 3</h1>
+			<p>Se necesita hacer un programa para verificar si se superó el récord Guinness del hombre que más BigMac comió en su vida. El programa debe pedir al usuario por vez el nombre de una persona y la cantidad de de BigMac que comió. Controlar que la cantidad sea un número mayor a 0. El programa debe encontrar y escribir en la página el nombre y la cantidad de BigMac del que más comió. Para terminar, el usuario debe ingresar “fin” en lugar del nombre. En caso que el usuario ingrese “fin” en la primera oportunidad, escribir un mensaje que indique que no se ingresó ningún dato válido. Agregar un elemento con un evento que controle si el hombre que más BigMac comió de todos los ingresados superó el récord Guinness vigente de 28788 BigMac y escriba un mensaje, según el resultado si superó, igualó o no superó, cada uno con un color diferente.</p>
+	</article>
+
+	<p id="parrafo"></p>
+	<button onclick="romperRecord()">De los ingresados, ¿Quién rompio el record Guiness?</button>
+	<p id="romperRecordGuiness"></p>
+	
+	<script>
+		let competidores = [];
+		let contador = 0;
+        while(true) {
+            const competidorIngresado = prompt("Ingrese el nombre del competidor: ");
+            if (competidorIngresado === "fin") {
+				if(contador === 0) {
+					alert("Por favor, ingrese algo antes de poner FIN.");
+				} else {
+					break;
+				}
+			}
+            const cantidadDeBigMacs = parseInt(prompt("Ingrese cuantas Big Macs comio: "));
+            if(cantidadDeBigMacs > 0) {
+                competidores.push([competidorIngresado, cantidadDeBigMacs]);
+			} else {
+				alert("Por favor, ingrese un numero mayor a 0.")
+			}
+			contador++;
+		}
+		
+		let masBigMacs = ["",0];
+		for (let i = 0; i < competidores.length; i++) {
+			for (let j = 0; j < competidores[i].length; j++) {
+				if (competidores[i][j] > masBigMacs[1]) {
+					masBigMacs = competidores[i];
+				}
+			}
+		}
+		
+		const p = document.getElementById("parrafo");
+		p.innerHTML = "El competidor fue: " + masBigMacs[0] + " y comió: " + masBigMacs[1] + " hamburguesas.";
+
+		function romperRecord() {
+			if (masBigMacs[1] > 28788) {
+				document.getElementById("romperRecordGuiness").innerHTML = "El competidor " + masBigMacs[0] + " rompio un nuevo record con " + masBigMacs[1] + " BigMacs.";
+				document.getElementById("romperRecordGuiness").style.backgroundColor = 'violet';
+			} else{
+				document.getElementById("romperRecordGuiness").innerHTML = "Ninguno de los ingresados rompio un nuevo record :(."
+				document.getElementById("romperRecordGuiness").style.backgroundColor = 'indianred';
+			}
+		}
+	</script>
+	<footer>
+		<p>Informática General 2020</p>
+	</footer>
+</div>
+</body>
+</html> 

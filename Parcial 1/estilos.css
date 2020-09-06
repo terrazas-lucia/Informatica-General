@@ -1,0 +1,55 @@
+body{
+	font-family: Arial, sans-serif;
+	background-color: white;
+}
+#contenedor{
+	background-color:pink;
+	padding: 10px;
+	margin: 0 10% 10% 10%;
+}
+header{
+	background-color: palevioletred;
+	text-align: center;
+	padding: 10px;
+	margin: 15px;
+}
+
+h1{
+	color: black;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    background-color: purple;
+}
+
+article{
+	padding: 20px;
+}
+
+p{
+	display: block;
+	margin: 15px;
+}
+
+footer{
+	background-color: palevioletred;
+	text-align: center;
+	padding: 20px;
+	margin: 15px;
+    color: white;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px;
+
+}
+
+button{
+    margin-left: 5px;
+    color: purple;
+}
+

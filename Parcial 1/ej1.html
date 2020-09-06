@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es"> 
+<head>
+	<meta charset="UTF-8">
+	<title>Parcial</title> 
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+	<div id="contenedor">
+	<header>
+		<h1>Ejercicio 1</h1>
+		<h2>Tema 6</h2>
+	</header>
+
+	<nav>
+		<ul>
+			<a href="index.html"><li>Inicio</li></a>
+			<a href="ej1.html"><li>Ejercicio 1</li></a>
+			<a href="ej2.html"><li>Ejercicio 2</li></a>
+			<a href="ej3.html"><li>Ejercicio 3</li></a>
+		</ul>
+	</nav>
+	<article>
+			<h1>Consigna del ejercicio 1</h1>
+			<p>Hacer un programa que calcule la suma de los números múltiplos de 52 comprendidos entre 412 y 3888 inclusive. Escribir el resultado dentro de un cuadrado gris que al hacerle clic cambie a naranja si el resultado es un número impar o cambie a rojo si es par. </p>
+	</article>
+
+	<p id="resultado"></p>
+	<button onclick="cambiarColor()">¿Par o impar?</button>
+
+	<footer>
+		<p>Informática General 2020</p>
+	</footer>
+
+	<script>
+		let suma = 0; 
+		let multiplo = 1;
+		while (52* multiplo < 3888) {
+			if (52 * multiplo > 412) {
+				suma += 52 * multiplo;
+				multiplo++
+			} else {
+				multiplo++;
+			}
+		}
+
+		const cuadroResultado = document.getElementById("resultado")
+		cuadroResultado.innerHTML = suma;
+		cuadroResultado.style.backgroundColor = "grey";
+
+		function cambiarColor() {
+			if (suma % 2 === 0) {
+				cuadroResultado.style.backgroundColor = 'red'
+			} else {
+				cuadroResultado.style.backgroundColor = 'orange'
+			}
+		}
+	</script>
+</div>
+</body>
+</html> 

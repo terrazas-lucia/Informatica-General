@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es"> 
+<head>
+	<meta charset="UTF-8">
+	<title>Parcial</title> 
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+	<div id="contenedor">
+	<header>
+		<h1>Ejercicio 2</h1>
+		<h2>Tema 6</h2>
+	</header>
+
+	<nav>
+		<ul>
+			<a href="index.html"><li>Inicio</li></a>
+			<a href="ej1.html"><li>Ejercicio 1</li></a>
+			<a href="ej2.html"><li>Ejercicio 2</li></a>
+			<a href="ej3.html"><li>Ejercicio 3</li></a>
+		</ul>
+	</nav>
+	<article>
+			<h1>Consigna del ejercicio 2</h1>
+			<p>La jefa de una fábrica tiene que contar la cantidad de productos defectuosos por cada máquina en funcionamiento. La fábrica tiene 14 máquinas en funcionamiento. Hacer el programa que le permita a la jefa ingresar los datos de la cantidad de productos defectuosos por cada máquina. Luego calcular la cantidad de productos defectuosos totales considerando todas las máquinas y el promedio de productos defectuosos por máquina. También calcular la cantidad de productos defectuosos de la máquina que menos productos defectuosos tiene y la cantidad de productos defectuosos de la máquina que más productos defectuosos tiene. Por último calcular cuántos serían los productos defectuosos si todas las máquinas tuvieran la misma cantidad de productos defectuosos que la máquina que menos tiene. Verificar que todos los datos ingresados sean válidos (números iguales o mayores a 0) y mostrar los resultados en la página.</p>
+	</article>
+
+	<p>Maquina 1: <button id="0" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+    <p>Maquina 2: <button id="1" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+    <p>Maquina 3: <button id="2" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+    <p>Maquina 4: <button id="3" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+    <p>Maquina 5: <button id="4" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+	<p>Maquina 6: <button id="5" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+	<p>Maquina 7: <button id="6" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+    <p>Maquina 8: <button id="7" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+    <p>Maquina 9: <button id="8" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+    <p>Maquina 10: <button id="9" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+    <p>Maquina 11: <button id="10" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+	<p>Maquina 12: <button id="11" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+	<p>Maquina 13: <button id="12" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+	<p>Maquina 14: <button id="13" onclick="cambiarCantidadDefectuosos(this)">Cargar productos defectuosos</button><br></p>
+	<p>Cantidad de productos defectuosos totales (considerando todas las maquinas): <button onclick="alert('La cantidad total de productos defectuoso: ' + totalesDefectuosos())">Calcular</button>
+    <p>Promedio de productos defectuosos por maquina: <button onclick="alert('El promedio de productos defectuosos por maquina: ' + calcularPromedio())">Calcular</button><br></p>
+	<p>Cantidad de productos defectuosos de la maquina que menos productos defectuosos tiene: <button onclick="alert('La cantidad de productos defectuosos es: ' + menorDefectuosos())">Calcular</button></p>
+	<p>Cantidad de productos defectuosos de la maquina de mas productos defectuosos tiene: <button onclick="alert('La cantidad de productos defectuosos es: ' + mayorDefectuosos())">Calcular</button></p>
+	<p>¿Cúantos serian los productos defectuosos si todas las maquinas tuvieran la misma cantidad de productos defectuosos que la maquina que menos tiene? <button onclick="alert('La cantidad seria: ' + segunMenorDefectuosos())">Calcular</button></p>
+
+	<footer>
+		<p>Informática General 2020</p>
+	</footer>
+
+	<script>
+		let defectuosos = [0,0,0,0,0,0,0,0,0,0,0,0];
+		
+		function cambiarCantidadDefectuosos(elemento) {
+			defectuosos[parseInt(elemento.id)] = parseInt(prompt("Por favor, ingrese la cantidad de productos defectuosos: "));
+		}
+		
+		function totalesDefectuosos() {
+			let suma = 0;
+			for (let i = 0; i < defectuosos.length; i++) {
+				suma += defectuosos[i];
+			}
+			return suma
+		}
+
+		function calcularPromedio() {
+			const suma = totalesDefectuosos();
+			return suma / defectuosos.length;
+		}
+
+		function menorDefectuosos() {
+			let menor = Infinity;
+			for(let i = 0; i < defectuosos.length; i++){
+				if(defectuosos[i] < menor){
+					menor = defectuosos[i];
+				}
+			}
+			return menor;
+		}
+
+		function mayorDefectuosos() {
+			let mayor = 0;
+			for(let i = 0; i < defectuosos.length; i++){
+				if(defectuosos[i] > mayor){
+					mayor = defectuosos[i];
+				}
+			}
+			return mayor;
+		}
+
+		function segunMenorDefectuosos() {
+			const menor = menorDefectuosos();
+			return menor * defectuosos.length;
+		}
+		
+	</script>
+</div>
+</body>
+</html> 
