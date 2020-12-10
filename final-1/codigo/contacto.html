@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norrum Plexus</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li class="dropdown"><a href="#">Galería &dtrif;</a>
+                        <ul>
+                            <li><a href="#">Resident Evil</a></li>
+                            <li><a href="#">Personal</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Canales &dtrif;</a>
+                    <ul>
+                        <li><a href="#">Norrum</a></li>
+                        <li><a href="#">Norrum Plexus</a></li>
+                        <li><a href="#">Sebastian Valdez</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="">Juegos</a></li>
+                    <li class="dropdown"><a href="#">Misceláneo &dtrif;</a>
+                        <ul>
+                            <li><a href="#">Intiposting</a></li>
+                            <li><a href="#">Minecraft</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#">Datos del alumno</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1 style="text-align: center;">¡Contactame!</h1>
+    <section class="contacto">   
+        <form action="mailto:valdezesco@hotmail.com" method="POST" enctype="text/plain">
+            Tu nombre: <br>
+            <input type="text" name="name" placeholder="Tu nombre..."><br>
+            Tu e-mail: <br>
+            <input type="text" name="mail" placeholder="Tu e-mail..."><br>
+            Tu mensaje:
+            <input type="text" name="mensaje" size="50" placeholder="Tu mensaje..." style="height: 200px;"><br>
+            <input type="submit" value="Enviar" onclick="validarEmail(mail)">
+            <input type="reset" value="Cancelar">
+        </form>
+    </section>
+    <script src="javascript.js"></script>
+</body>
+</html>

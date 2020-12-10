@@ -1,0 +1,79 @@
+.menu ul{
+    background: black;
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li{
+    width: 130px;
+}
+
+.menu ul ul{
+    display: none;
+    position: absolute;
+}
+
+.menu a{
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover{
+    background: violet;
+    transition-duration: 0.5s;
+}
+
+.menu a span{
+    margin-left: 10px;
+}
+
+.dropdown:hover ul{
+    display: block;
+    position: absolute;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid pink;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-top: 6px;
+    margin-bottom: 16px;
+
+}
+
+input[type=submit]{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+input[type=reset]{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: rosybrown;
+    transition-duration: 0.5s;
+}
+
+input[type=reset]:hover{
+    background-color: rosybrown;
+    transition-duration: 0.5s;
+}
+.contacto{
+    border-radius: 5px;
+    background-color: red;
+    padding: 10px;
+    margin: 300px;
+    margin-top: 10px;
+}
