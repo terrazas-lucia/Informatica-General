@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@400;500&display=swap');
+
+body{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+header img{
+    margin-left: 600px;
+}
+
+.menu ul{
+    background: black;
+    display: flex;
+    list-style: none;
+}
+.menu li{
+    display: block;
+    width: 200px;
+}
+
+.menu ul ul{
+    display: none;
+    position: absolute;
+}
+
+.menu a{
+    display: flex;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover{
+    background: white;
+    transition-duration: 0.5s;
+    color: black;
+}
+
+h1{
+    margin-top: 30px;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 1px red;
+}
+
+h2{
+    color: white;
+    padding: 1%;
+    font-size: 200%; 
+    text-align: center;
+    display: block;
+
+}
+
+.container{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: justify;
+    font-size: 1.75rem;
+    padding: 70px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.container p{
+    margin: 30px;
+}
+
+.container a:visited{
+    color: red;
+}
+
+.dropdown:hover ul{
+    display: block;
+    position: absolute;
+}
+
+.slides{
+    width: 28%;
+    padding: 10px;
+    margin-left: 170px;
+    display: inline-grid;
+    color: white; 
+    text-align: justify;
+}
+
+.slides-individual{
+    width: 28%;
+    display: inline-grid;
+    margin: 3%; 
+    margin-top: 1%; 
+    margin-bottom: 0.5%;
+    text-align: center; 
+    font-size: 0.85rem;
+}
+
+.flechitas{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.concepto{
+    color: white;
+    display: flex;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.concepto a:visited{
+    color: red;
+}
+
+.imagenes{
+    margin: 0px;
+    margin-left: 150px;
+}
+
+.imagenes h3, a:visited{
+    color: white;
+    font-size: 1.5rem;
+    text-align: left;
+    text-shadow: 2px 2px 1px red;
+}
+
+.imagenes img{
+   padding: 10px;
+}
+
+.descripcion{
+    text-align: center;
+    color: white;
+    font-size: 150%;
+}
+
+.descripcion img{
+    padding: 2%;
+}
+
+.asesinos{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    text-align: justify;
+    color: white;
+    padding: 20px;
+}
+
+.asesinos img{
+    margin: 20px;
+    margin-top: 5px;
+}
+
+.developers{
+    color: white;
+    display: flex;
+}
+
+.developers p{
+    padding: 2%;
+    font-size: 130%;
+}
+
+.developers img{
+    padding: 2%;
+    width: 35%;
+}
+
+.developers a:visited{
+    color: red;
+}
+
+.development{
+    display: inline-block;
+    padding: 7%;
+    padding-top: 1%;
+}
+.development p{
+    color: white;
+    text-align: center;
+    font-size: 110%;
+}
+
+.development a:visited{
+    color: red;
+}
+
+.juego {
+    display: inline-flex;
+    text-align: center;
+}
+
+.juego img{
+    width: 30%;
+}
+
+.juego button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid pink;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-top: 6px;
+    margin-bottom: 16px;
+
+}
+
+input[type=email]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid pink;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type=submit]{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+input[type=reset]{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: grey;;
+    transition-duration: 0.5s;
+}
+
+input[type=reset]:hover{
+    background-color: grey;
+    transition-duration: 0.5s;
+}
+.contacto{
+    border-radius: 5px;
+    padding: 10px;
+    margin: 300px;
+    margin-top: 10px;
+    color: white;
+}
+
+footer{
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 1024px){
+    header img{
+        margin-left: 420px;
+    }
+    .menu a{
+        padding: 1px 1px;
+    }
+    .container{
+        font-size: 1.25rem;
+    }
+    .slides-individual{
+        width: 100%;
+    }
+    .concepto{
+        font-size: 1rem;
+    }
+    .imagenes img{
+        width: 40%;
+    }
+    .slides{
+        margin-left: 100px;
+    }
+    .asesinos{
+        font-size: 1.2rem;
+    }
+    .videos{
+        padding: 2%;
+        margin-left: 15%;
+    }
+    .developers{
+        display: block;
+    }
+    .developers img{
+        width: 20%;
+        margin-left: 75%;
+        padding: 0%;
+    }
+}

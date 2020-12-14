@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead by Daylight</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+    <header>
+        <img src="../imagenes/logoprincipal.png" alt="DEAD BY DAYLIGHT">
+        <div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li class="dropdown"><a href="../galeria/galeria.html">GALERIA &dtrif;</a>
+                        <ul>
+                            <li><a href="../galeria/arteconceptual.html">ARTE CONCEPTUAL</a></li>
+                            <li><a href="../galeria/galeria.html">MAPAS</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="../personajes/guias.html">PERSONAJES &dtrif;</a>
+                        <ul>
+                            <li><a href="../personajes/asesinos.html">ASESINOS</a></li>
+                            <li><a href="../personajes/supervivientes.html">SUPERVIVIENTES</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="../informacion/informacion.html">INFORMACION &dtrif;</a>
+                        <ul>
+                            <li><a href="../informacion/desarrollo.html">DESARROLLO</a></li>
+                            <li><a href="../informacion/creadores.html">CREADORES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="juego.html">JUEGO</a></li>
+                    <li><a href="../contacto.html">CONTACTO</a></li>
+                    <li><a href="../datosdelalumno.html">DATOS DEL ALUMNO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <section>
+            <h1>PROBA TU SUERTE CON ACE VISCONTI</h1>
+            <h2 style="text-align: center;">NUMERO OBJETIVO: <span id="numero-objetivo"></span></h2>
+            <div class="container">
+                <div class="juego">
+                    <div class="lado-ace lado">
+                        <img src="imagenes/ace.png" alt="aceJuego">
+                        <p id="puntosAce">Puntos: <span>0</span>/15</p>
+                        <div>
+                            <img src="imagenes/dadoace/dado1Ace.png" alt="dado1" id="dado1Ace">
+                            <img src="imagenes/dadoace/dado1Ace.png" alt="dado2" id="dado2Ace">
+                            <img src="imagenes/dadoace/dado1Ace.png" alt="dado3" id="dado3Ace">
+                        </div>
+                    </div>
+                    <div class="lado-jugador lado">
+                        <img src="imagenes/jugador.png" alt="vosJugando">
+                        <p id="puntosJugador">Puntos: <span>0</span>/15</p>
+                        <div>
+                            <img src="imagenes/dadojugador/dado1Jugador.png" alt="dado1" id="dado1Jugador">
+                            <img src="imagenes/dadojugador/dado1Jugador.png" alt="dado2" id="dado2Jugador">
+                            <img src="imagenes/dadojugador/dado1Jugador.png" alt="dado3" id="dado3Jugador">
+                        </div>
+                        <button onclick="turno(jugador)" id="boton-tirar-dado">Tirar dado</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+    <footer>
+        <div>
+            <p><strong> UNA Informatica General DRELICHMAN &copy;2020</strong></p>
+        </div>
+    </footer>
+    <script src="../jquery.js"></script>
+    <script src="juego.js"></script>
+</body>
+
+</html>
